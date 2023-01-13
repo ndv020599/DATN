@@ -1,0 +1,341 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+:root {
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --text-color: rgba(255, 255, 255, 0.6);
+  --bg-dark: #3c4b64;
+  --bg-dark-hover: rgba(255, 255, 255, 0.05);
+}
+
+html {
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+  height: 100%;
+}
+
+#particle-canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sign-in-form {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      width: 50%;
+      .img-company {
+        width: 100%;
+      }
+      .MuiFormControl-root {
+        margin: 10px 0;
+      }
+    }
+
+    .MuiDialogActions-root {
+      padding: 0px 24px 24px;
+    }
+  }
+}
+
+.navbar {
+  padding: 0 !important;
+
+  &-item {
+    height: 100%;
+    width: 100%;
+
+    &-button {
+      width: 100%;
+      height: 100%;
+      padding: 0 !important;
+    }
+
+    &-link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      padding: 13px 16px;
+      text-decoration: none;
+      color: var(--text-color);
+
+      &.active {
+        width: 100%;
+        background-color: var(--bg-dark-hover);
+        color: var(--primary-color-light);
+      }
+    }
+
+    &-link:hover {
+      background-color: var(--bg-dark-hover);
+    }
+
+    &-link:hover &-icon {
+      color: var(--primary-color-light);
+    }
+
+    &-link:hover &-text {
+      color: var(--primary-color-light);
+    }
+
+    &-icon {
+      margin: 0 10px;
+      line-height: 100%;
+      font-size: 14px;
+    }
+
+    &-text {
+      display: inline-block;
+      height: 100%;
+      margin-left: 10px;
+      font-size: 18px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    }
+  }
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-header {
+    width: 600px !important;
+    height: 60px;
+    background: rgb(42, 72, 107);
+    background: -moz-linear-gradient(
+      left,
+      rgba(42, 72, 107, 1) 0%,
+      rgba(80, 122, 167, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(42, 72, 107, 1) 0%,
+      rgba(80, 122, 167, 1) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(42, 72, 107, 1) 0%,
+      rgba(80, 122, 167, 1) 100%
+    );
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 1px 15px 25px -5px rgb(0 0 0 / 30%);
+
+    &-text {
+      text-align: left;
+      margin-left: 25px;
+      letter-spacing: 7px;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+      margin-top: 23px;
+    }
+
+    &-button {
+      width: 70px;
+      height: 60px;
+      background: rgb(42, 72, 107);
+      background: -moz-linear-gradient(
+        left,
+        rgba(42, 72, 107, 1) 0%,
+        rgba(80, 122, 167, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(42, 72, 107, 1) 0%,
+        rgba(80, 122, 167, 1) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(42, 72, 107, 1) 0%,
+        rgba(80, 122, 167, 1) 100%
+      );
+
+      div {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+    }
+  }
+
+  &-form {
+    width: 600px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px 20px;
+    box-shadow: 1px 10px 20px 0px rgb(218 215 206 / 50%);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+
+    &-button {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px !important;
+    }
+
+    &-input {
+      &-50 {
+        width: 48%;
+      }
+      &-100 {
+        width: 100%;
+      }
+    }
+  }
+
+  &-body {
+    margin-top: 15px;
+    width: 600px;
+  }
+
+  &-list {
+    list-style: none;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 75px;
+    background-color: #fff;
+    box-shadow: 1px 10px 20px 0px rgb(218 215 206 / 50%);
+    margin: 10px 0;
+
+    &:hover {
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    }
+
+    &-field {
+      width: 125px;
+      border-left: 4px solid #e45;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+
+      p {
+        text-align: center;
+        color: #e45;
+        font-weight: 600;
+      }
+    }
+
+    &-content {
+      h4 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      p {
+      }
+    }
+
+    &-content {
+      width: 350px;
+      margin: 25px 0;
+    }
+
+    &-action {
+      width: 90px;
+      display: flex;
+      justify-content: space-evenly;
+      color: #4c75a1;
+      font-size: 18px;
+
+      span:hover {
+        cursor: pointer;
+        color: #1b528d;
+      }
+    }
+  }
+}
+
+.row-50 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-100 {
+  width: 100%;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+.icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  button {
+    color: rgb(255, 0, 0, 0.7);
+  }
+}
+
+.button-confirm {
+  background-color: #7467ef !important;
+}
+
+.button-confirm1 {
+  background-color: #339999 !important;
+}
+
+.button-cancel {
+  background-color: #ff9e43 !important;
+}
+
+.static_1,
+.static_2,
+.static_3,
+.static_4 {
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  min-height: 170px;
+}
+
+.static_1 {
+  background-color: #72b1db;
+}
+
+.static_2 {
+  background-color: #cc5757;
+}
+
+.static_3 {
+  background-color: #8b61b5;
+}
+
+.static_4 {
+  background-color: #af7d56;
+}
+
+.h4_size,
+.h1_size {
+  color: #fff !important;
+}
